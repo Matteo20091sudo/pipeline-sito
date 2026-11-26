@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Verifica Ivan</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+    <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
-    <h1>Ciaone!!!</h1>
+    <div class="w3-banner w3-purple w3-center w3-padding-48">
+        <h1>Click your time</h1>
+        <h5>Ogni momento merita il suo spazio</h5>
+    </div>
+    <div class="w3-white w3-card w3-container w3-padding w3-border w3-round w3-shadow" style="margin: 50px;">
+        <h3>Benvenuto</h3>
+        <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci minus veritatis, architecto rerum laudantium temporibus recusandae fugiat. Aliquid in nobis porro! Optio amet possimus hic nostrum eius voluptas quis quaerat, qui adipisci sunt. Placeat facilis distinctio harum quam labore accusamus, est maxime laboriosam in voluptas ullam ut vitae, a illum!</h5>
+    </div>
+    <div class="w3-row w3-container">
+        <button onclick="aggiungiUno()" class="w3-column w3-center w3-third w3-white" >
+            <img src="1.png" alt=""><br>
+            +1
+        </button>
+        <button onclick="aggiungiTre()" class="w3-column w3-center w3-third w3-white" >
+            <img src="3.png" alt=""><br>
+            +3
+        </button>
+        <button onclick="aggiungiCinque()" class="w3-column w3-center w3-third w3-white" >
+            <img src="5.png" alt=""><br>
+            +5
+        </button>
+    </div>
+    <div class="w3-container w3-center w3-white w3-margin w3-card w3-round">
+        <h2>Contatore</h2>
+        <h1 id="contatore">0</h1>
+        <button onclick="azzera()" style="margin: 20px;" class="w3-red w3-round">Azzera</button>
+    </div>
+    <div class="w3-container w3-banner w3-margin-top w3-black w3-center w3-padding">
+        <h4>4Ai - &copy;2026 Dalmine</h4>
+        <h4>Ivan Matteo Alexandru</h4>
+        <h4>Infos - Contatti - Dove siamo</h4>
+    </div>
+
+    <script>
+
+        let ContatoreHTML = document.getElementById("contatore");
+
+        var contatore = 0;
+
+        function aggiungiUno(){
+            let numero = 1;
+            contatore = contatore + numero;
+            let nuovoNumero = String(contatore);
+            ContatoreHTML.textContent = nuovoNumero;
+        }
+
+        function aggiungiTre(){
+            let numero = 3;
+            contatore += numero;
+            let nuovoNumero = String(contatore);
+            ContatoreHTML.textContent = nuovoNumero;
+        }
+
+        function aggiungiCinque(){
+            let numero = 5;
+            contatore += numero;
+            let nuovoNumero = String(contatore);
+            ContatoreHTML.textContent = nuovoNumero;
+        }
+
+        function azzera(){
+            contatore = 0;
+            let nuovoNumero = String(contatore);
+            ContatoreHTML.textContent = nuovoNumero;
+        }
+
+    </script>
+
 </body>
 </html>
